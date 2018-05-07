@@ -189,4 +189,17 @@ td {
     .header h3 {
         margin-bottom: 3rem;
     }
+    .input {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .view {
+        margin-top: 3rem;
+    }
+    tr {
+        height: 40px;
+    }
+    td {
+        width: 40px;
+    }
 }
