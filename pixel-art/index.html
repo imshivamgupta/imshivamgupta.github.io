@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/anime.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
     <title>Pixel Art Project</title>
 </head>
 
 <body>
     <!-- For Attaining the Full width of the viewport -->
-    <div class="container-fluid">
+    <div class="container-fluid animsition">
         <!-- presenting the content in stantard view -->
         <div class="container">
             <!-- Form Card -->
@@ -35,11 +36,22 @@
                     <table id="pixel_canvas">
                     </table>
                 </div>
+                <a class="animsition-link" data-animsition-out-class="fade-out-right" data-animsition-out-duration="500" href="demo.html">Click</a>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="js/anime.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".animsition").animsition({
+                inClass: 'rotate-in-sm',
+                outClass: 'rotate-out-sm'
+
+            });
+        });
+    </script>
 </body>
 
 </html>
