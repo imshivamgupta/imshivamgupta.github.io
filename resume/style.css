@@ -1,0 +1,187 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html *::before, html *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+:root {
+  --gradient-light: linear-gradient(145deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .25));
+  --gradient-dark: linear-gradient(145deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .25));
+  --not-black: #3f4142;
+  --primary: #689de0;
+  --success: #28e470;
+  --light: #d3d7e0;
+  --bg: #ecf0f1;
+}
+
+main {
+  width: 80%;
+  min-height: 500px;
+  -webkit-box-shadow: 0px 50px 186px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 50px 186px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 500px;
+}
+
+main .content__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  height: 500px;
+  color: var(--not-black);
+  padding: 30px;
+}
+
+main .content__text h1 {
+  font-weight: 300;
+}
+
+main .content__text .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+}
+
+main .content__text .btn-group .btn {
+  display: block;
+  width: 150px;
+  margin: .6em 0;
+  padding: .6em 1em;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 2px solid #cccccc;
+  background: transparent;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .content__text .btn-group .btn:first-child {
+  margin-right: 16px;
+}
+
+main .content__text .btn-group .btn:first-child:hover {
+  cursor: pointer;
+  border: 2px solid var(--primary);
+}
+
+main .content__text .btn-group .btn:after {
+  position: absolute;
+  -webkit-transition: .3s;
+  transition: .3s;
+  content: '';
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  background: #c0392b;
+}
+
+main .content__text .btn-group .btn:hover {
+  cursor: pointer;
+  border: 2px solid #c0392b;
+}
+
+main .content__text .btn-group .btn:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+main .content__text .btn-group .btn:focus {
+  outline: none;
+}
+
+main .content__visual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  background-color: var(--primary);
+  height: 500px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+main .content__visual img {
+  position: absolute;
+  left: -50px;
+  width: 280px;
+  height: 400px;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=style.css.map */
