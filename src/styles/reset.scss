@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: Poppins;
+  background: #edf2f8;
+  color: rgba($color: #000000, $alpha: 0.7);
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+// DarkMode
+html {
+  transition: color 300ms, background-color 300ms;
+}
+html[theme='dark'] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html[theme='dark'] img {
+  filter: invert(1) hue-rotate(180deg);
+}

@@ -1,0 +1,1 @@
+.typed-element{display:flex;align-items:center}.typed-element .typed-cursor{opacity:1;-webkit-animation:typedjsBlink .7s infinite;animation:typedjsBlink .7s infinite}@-webkit-keyframes typedjsBlink{50%{opacity:0}}@keyframes typedjsBlink{50%{opacity:0}}
