@@ -5,10 +5,19 @@
     <div class="featured">
       <div class="emoji">✋</div>
       <div class="info">
-        <span>Hello, There</span>
+        <span>Namaste, World! Looking for </span>
 
-        <vue-typed-js :strings="['First text', 'Second Text']" loop>
-          <h1 class="typing"></h1>
+        <vue-typed-js
+          :strings="[
+            'Web Developer',
+            'App Developer',
+            'API Developer',
+            'Graphic Designer',
+            'Video Editor',
+          ]"
+          loop
+        >
+          <h1><span class="typing"></span></h1>
         </vue-typed-js>
       </div>
     </div>
@@ -58,27 +67,27 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import VueTypedJs from 'vue-typed-js'
-Vue.use(VueTypedJs)
-import CircleGradient from '@/components/Utilities/CircleGradient'
-import { gsap, Power3, Expo } from 'gsap'
+import Vue from "vue";
+import VueTypedJs from "vue-typed-js";
+Vue.use(VueTypedJs);
+import CircleGradient from "@/components/Utilities/CircleGradient";
+import { gsap, Power3, Expo } from "gsap";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    CircleGradient
+    CircleGradient,
   },
   computed: {
     circleVars() {
       return {
-        '--width': '500px'
-      }
+        "--width": "500px",
+      };
     },
     circleVarsSM1() {
       return {
-        '--width': '80px'
-      }
-    }
+        "--width": "80px",
+      };
+    },
   },
   data() {
     return {
@@ -87,42 +96,42 @@ export default {
       animation: false,
       interaction: false,
       illustration: false,
-      insAnimation: null
-    }
+      insAnimation: null,
+    };
   },
   created() {
-    window.addEventListener('load', this.onWindowLoad)
+    window.addEventListener("load", this.onWindowLoad);
   },
   mounted() {
-    gsap.set('.highlight>span', {
-      opacity: 0
-    })
+    gsap.set(".highlight>span", {
+      opacity: 0,
+    });
   },
   methods: {
     onWindowLoad() {
-      this.$emit('loaded')
-      this.imageAnim()
+      this.$emit("loaded");
+      this.imageAnim();
     },
     imageAnim() {
-      gsap.from('.highlight,.circle', {
+      gsap.from(".highlight,.circle", {
         alpha: 0,
         duration: 1,
         delay: 1,
         stagger: 0.1,
-        ease: Power3.easeInOut
-      })
+        ease: Power3.easeInOut,
+      });
     },
     tweenAnimation(e) {
-      const el = e.target
-      const img = el.querySelector('img'),
-        text = el.querySelector('span')
-      this.insAnimation = gsap.timeline()
+      const el = e.target;
+      const img = el.querySelector("img"),
+        text = el.querySelector("span");
+      this.insAnimation = gsap.timeline();
       this.insAnimation
         .to(img, {
           borderRadius: 4,
           x: -10,
           duration: 0.5,
-          ease: Expo.easeInOut
+          ease: Expo.easeInOut,
         })
         .to(
           text,
@@ -130,24 +139,26 @@ export default {
             opacity: 1,
             x: 50,
             duration: 0.5,
-            ease: Expo.easeInOut
+            ease: Expo.easeInOut,
           },
           0
-        )
+        );
     },
     reverseTweenAnimtion() {
-      this.insAnimation.reverse()
-      this.insAnimation = null
-    }
-  }
-}
+      this.insAnimation.reverse();
+      this.insAnimation = null;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .homepage {
   position: relative;
   padding: 1.5rem;
-  height: calc(100vh - 78px);
+  height: calc(100vh - 112px);
+  display: flex;
+  align-items: center;
   .circle {
     position: absolute;
     left: calc(50% - (var(--width)) / 2);
@@ -159,12 +170,16 @@ export default {
   }
 
   .featured {
+    align-self: flex-start;
     padding: 1.5rem;
     border-radius: 15px;
     background: #edf2f8;
     box-shadow: 30px 30px 60px #c9ced3, -30px -30px 60px #ffffff;
     @include flex-center;
     display: inline-flex;
+    h1 {
+      font-size: 28px;
+    }
     span {
       font-weight: 600;
     }
@@ -191,7 +206,7 @@ export default {
 
       color: rgba($color: black, $alpha: 0.8);
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 100%;
         height: 60%;

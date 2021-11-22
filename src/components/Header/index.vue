@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header--logo">
-      <h3>ShivamGupta</h3>
+      <router-link tag="h3" to="/">ShivamGupta</router-link>
     </div>
     <ul class="header--menu">
       <router-link tag="li" to="/">cases</router-link>
@@ -81,8 +81,8 @@
 
 <script>
 export default {
-  name: 'Header'
-}
+  name: "Header",
+};
 </script>
 
 <style lang="scss" scoped>
@@ -93,6 +93,7 @@ export default {
     font-family: $brandFont;
     h3 {
       letter-spacing: 2px;
+      cursor: pointer;
     }
   }
   &--menu {
@@ -103,7 +104,7 @@ export default {
         margin-right: 1rem;
       }
       &::before {
-        content: '';
+        content: "";
         display: block;
         margin: auto;
         margin-bottom: -1rem;
@@ -144,7 +145,7 @@ export default {
       -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     }
 
-    label input[type='checkbox'] {
+    label input[type="checkbox"] {
       height: 0;
       width: 0;
       visibility: hidden;
@@ -172,7 +173,7 @@ export default {
     }
 
     label .planet::after {
-      content: '';
+      content: "";
       background-color: var(--bg-planet-shadow);
       width: 2rem;
       height: 2rem;
