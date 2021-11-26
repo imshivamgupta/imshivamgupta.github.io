@@ -6,7 +6,6 @@
       <div class="emoji">✋</div>
       <div class="info">
         <span>Namaste, World! Looking for </span>
-
         <vue-typed-js
           :strings="[
             'Web Developer',
@@ -74,6 +73,11 @@ import CircleGradient from "@/components/Utilities/CircleGradient";
 import { gsap, Power3, Expo } from "gsap";
 export default {
   name: "Home",
+  props: {
+    darkMode: {
+      type: Boolean,
+    },
+  },
   components: {
     CircleGradient,
   },

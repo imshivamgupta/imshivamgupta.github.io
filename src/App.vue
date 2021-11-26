@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Container>
-      <Header :darkMode="darkMode" :status="loaded" />
+      <Header :status="loaded" />
       <transition name="slither">
-        <router-view @loaded="windowLoaded" />
+        <router-view @loaded="windowLoaded" :darkMode="darkMode" />
       </transition>
       <SocialMedia />
     </Container>
