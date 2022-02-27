@@ -1,0 +1,17 @@
+@keyframes slow-motion {
+  0% {
+    transform: translate3d(5px, 20px, 0);
+  }
+  100% {
+    transform: translate3d(-5px, -10px, 0);
+  }
+}
+@keyframes slow-motion-hi {
+  0% {
+    transform: rotate(-25deg);
+  }
+
+  100% {
+    transform: rotate(25deg);
+  }
+}

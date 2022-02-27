@@ -1,0 +1,21 @@
+{
+  "blogs": [
+    {
+      "title": "This is my first blog",
+      "text": "<h1>Hello, setup blog system using git based cms.</h1><p>mew  hellow cons</p>"
+    }
+  ],
+  "hi": {
+    "main-description": "hindi title",
+    "blogs": [
+      {
+        "title": "hindi blog"
+      }
+    ]
+  },
+  "en": {
+    "blogs": [
+      {}
+    ]
+  }
+}
