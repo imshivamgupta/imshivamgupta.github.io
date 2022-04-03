@@ -1,15 +1,15 @@
 const state = {
-  darkMode: false,
+  darkMode: true
 }
 
 const getters = {
-  darkMode: (state) => state.darkMode,
+  getDarkMode: (state) => state.darkMode
 }
 
 const mutations = {
   darkMode(state, payload) {
     state.darkMode = payload
-  },
+  }
 }
 
 const actions = {
@@ -21,12 +21,14 @@ const actions = {
       localStorage.setItem('darkMode', true)
       commit('darkMode', true)
     }
-  },
+    console.log('ss')
+  }
 }
 
 export default {
+  namespaced: true,
   state,
   getters,
   actions,
-  mutations,
+  mutations
 }

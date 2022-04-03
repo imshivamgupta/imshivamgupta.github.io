@@ -37,7 +37,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      darkMode: 'user/darkMode'
+      darkMode: 'user/getDarkMode'
     }),
     headerVars() {
       return {
@@ -49,11 +49,16 @@ export default {
   created() {
     console.log('created', this.darkMode)
     this.unsubscribe = this.$store.subscribe((mutation, { user }) => {
-      if (mutation.type === 'darkMode') {
+      if (mutation.type === 'user/darkMode') {
         const htmlDOM = window.document.querySelector('html')
         htmlDOM.setAttribute('theme', user.darkMode ? 'dark' : 'lite')
       }
     })
+    if (this.darkMode) {
+      const htmlDOM = window.document.querySelector('html')
+      htmlDOM.setAttribute('theme', user.darkMode ? 'dark' : 'lite')
+      console.log('sdsad')
+    }
   },
   beforeDestroy() {
     this.unsubscribe()

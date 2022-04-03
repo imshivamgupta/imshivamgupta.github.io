@@ -5,4 +5,9 @@ import firebaseConfig from './FirebaseConfig'
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)
 
+const timestamp = firebase.firestore.FieldValue.serverTimestamp
+export { timestamp }
+
+export const db = firebaseApp.firestore()
+
 export default firebaseApp

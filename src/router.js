@@ -10,12 +10,18 @@ let router = new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
+      meta: {
+        title: 'Home'
+      }
     },
     {
       path: '/404',
       name: 'NotFound',
-      component: NotFound
+      component: NotFound,
+      meta: {
+        title: '404 Not Found'
+      }
     },
     {
       path: '*',
@@ -32,6 +38,11 @@ let router = new Router({
       component: () => import('@/view/About/index.vue')
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title} | Shivam's Portfolio`
+  next()
 })
 
 export default router

@@ -12,7 +12,10 @@
     <div class="header--sidemenu">
       <!-- <button @click="$store.dispatch('toggleDarkMode')">DarkMode</button> -->
       <label>
-        <input type="checkbox" @change="$store.dispatch('toggleDarkMode')" />
+        <input
+          type="checkbox"
+          @change="$store.dispatch('user/toggleDarkMode')"
+        />
         <div class="planet"></div>
         <div class="elements">
           <svg

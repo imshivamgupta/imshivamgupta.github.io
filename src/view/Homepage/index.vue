@@ -110,6 +110,8 @@ export default {
     gsap.set('.highlight>span', {
       opacity: 0
     })
+    // this.$store.dispatch('fetchCaseStudies')
+    console.log(this.$store.dispatch('fetchCaseStudies'))
   },
   methods: {
     onWindowLoad() {
