@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/view/Homepage'
 import NotFound from '@/view/Error/NotFound'
 import Services from '@/view/Services'
+import CaseStudies from '@/view/CaseStudies'
 
 Vue.use(Router)
 let router = new Router({
@@ -26,6 +27,11 @@ let router = new Router({
     {
       path: '*',
       redirect: '404'
+    },
+    {
+      path: '/case',
+      name: 'Case-Studies',
+      component: CaseStudies
     },
     {
       path: '/work',

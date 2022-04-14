@@ -14,14 +14,18 @@ const mutations = {
 
 const actions = {
   toggleDarkMode({ commit, getters }) {
-    if (getters.darkMode) {
+    if (getters.getDarkMode) {
       localStorage.setItem('darkMode', false)
       commit('darkMode', false)
     } else {
       localStorage.setItem('darkMode', true)
       commit('darkMode', true)
     }
-    console.log('ss')
+  },
+  init({ commit, getters }) {
+    const item = JSON.parse(localStorage.getItem('darkMode'))
+    commit('darkMode', item)
+    console.log(item, getters.getDarkMode)
   }
 }
 

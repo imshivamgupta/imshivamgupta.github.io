@@ -1,11 +1,13 @@
 <template>
   <div class="header">
     <div class="header--logo">
-      <router-link tag="h3" to="/">ShivamGupta</router-link>
+      <router-link tag="h3" to="/">{{
+        false ? 'ShivamGupta' : 'DummyRummy'
+      }}</router-link>
     </div>
     <ul class="header--menu">
       <router-link tag="li" to="/">home</router-link>
-      <router-link tag="li" to="/case">cases study</router-link>
+      <router-link tag="li" to="/case">case study</router-link>
       <router-link tag="li" to="/work">work</router-link>
       <router-link tag="li" to="/about">about</router-link>
     </ul>
